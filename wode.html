@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no, viewport-fit=cover">
+    <link rel="stylesheet" href="./css/pubw.css">
+    <script src="./font/iconfont.js"></script>
+    <style>
+        .icon {
+            width: 1em;
+            height: 1em;
+            vertical-align: -0.15em;
+            fill: currentColor;
+            overflow: hidden;
+        }
+
+        #heade {
+            background-color: #fff;
+            width: 100%;
+            display: flex;
+            margin-top: 1vw;
+            position: fixed;
+            z-index: 100;
+        }
+
+        #heade>span:first-child {
+            font-size: 30px;
+            padding: 0 25px;
+
+            line-height: 30px;
+        }
+
+        #heade>div>span:nth-child(1) {
+            font-size: 25px;
+        }
+
+        #heade div {
+            flex-grow: 1;
+            background-color: #eee;
+            border-radius: 12px;
+            display: flex;
+        }
+
+        #heade div span {
+            margin: 0 20px;
+            line-height: 30px;
+        }
+
+        #heade input {
+            border: none;
+            outline: none;
+            background-color: #eee;
+            line-height: 30px;
+            flex-grow: 1;
+            border-radius: 12px;
+        }
+
+        #heade span:last-child {
+            font-size: 30px;
+            margin-left: 3vw;
+            margin-right: 10vw;
+        }
+
+        body {
+            padding-left: 5vw;
+        }
+
+        .wzy {
+            /* margin-top: 3vw; */
+            padding-top: 13vw;
+            display: flex;
+        }
+
+        .wzy img {
+            width: 16vw;
+            height: 16vw;
+            border-radius: 20px;
+        }
+
+        .wzy .txt {
+            padding-top: 2vw;
+        }
+
+        .wzy .txt h3 {
+            font-size: 4vw;
+        }
+
+        .wzy .txt h6 {
+            padding: 0;
+            margin: 0;
+            font-weight: normal;
+            font-size: 2vw;
+        }
+
+        .wzy .txt span {
+            margin-right: 5vw;
+            font-weight: normal;
+            font-size: 2vw;
+            color: #4c4c4c;
+        }
+
+        .nav {
+            display: flex;
+        }
+
+        .nav .wleft {
+            width: 38vw;
+            height: 60vw;
+            margin-top: 6vw;
+            margin-right: 3vw;
+            border-radius: 4vw;
+            background: linear-gradient(#c6eded, #eeedce);
+        }
+
+        .nav .wright {
+            width: 47vw;
+            height: 60vw;
+            margin-top: 6vw;
+        }
+
+        .nav .wleft h4 {
+            padding-top: 6vw;
+            padding-left: 5vw;
+        }
+
+        .nav .wleft h5 {
+            margin-top: 5vw;
+            margin-left: 7vw;
+            font-size: 2vw;
+            color: #999;
+        }
+
+        .nav .wleft img {
+            margin-top: 5vw;
+            margin-left: 8vw;
+            width: 20vw;
+            height: 20vw;
+            border-radius: 50%;
+        }
+
+        .nav .wright .wrightUp {
+            width: 46vw;
+            height: 32vw;
+            color: #191919;
+            padding-left: 3vw;
+            margin-bottom: 3vw;
+            border-radius: 4vw;
+            background-color: #f7f7f7;
+        }
+
+        .nav .wright .wrightUp h4 {
+            padding-top: 6vw;
+        }
+
+        .nav .wright .wrightUp h5 {
+            margin-top: 5vw;
+        }
+
+        .nav .wright .wrightUp h6 {
+            margin-top: 1vw;
+            font-weight: 650;
+            color: #7b7b7b;
+        }
+
+        .nav .wright .wrightUp .ht {
+            height: 1vw;
+            width: 38vw;
+            background-color: #fff;
+            border-radius: 0.5vw;
+        }
+
+        .nav .wright .wrightUp .ht .lt {
+            width: 16vw;
+            height: 1vw;
+            background-color: #0199fd;
+            border-radius: 0.5vw;
+        }
+
+        .nav .wright .wrightDown {
+            width: 47vw;
+            height: 22vw;
+            padding-left: 3vw;
+            padding-top: 3vw;
+            border-radius: 4vw;
+            background-color: #f7f7f7;
+        }
+
+        .nav .wright .wrightDown .ht {
+            margin-top: 4vw;
+            margin-bottom: 4vw;
+            width: 40vw;
+            height: 1px;
+            background-color: #dedede;
+        }
+
+        #bnav {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: #eee;
+            z-index: 9;
+        }
+
+        body {
+            margin-bottom: 100px;
+        }
+
+        #bnav ul {
+            display: flex;
+        }
+
+        #bnav li {
+            width: 20%;
+            text-align: center;
+        }
+
+        #bnav svg {
+            font-size: 30px;
+            margin: 5px auto;
+
+        }
+
+        #bnav p {
+
+            font-size: 14px;
+            line-height: 22px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <header id="heade">
+        <div>
+            <span>
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-sousuo"></use>
+                </svg>
+            </span>
+            <input type="text" placeholder="哈利波特:魔法觉醒-全新光影">
+        </div>
+        <span>
+            <svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-xiazai"></use>
+            </svg>
+        </span>
+    </header>
+
+    <div class="wzy">
+        <a href="./setting.html">
+            <img src="./img/touxiang.jpg" alt="404">
+        </a>
+        <div class="txt">
+            <h3>汝克楠</h3>
+            <span>预约 0 ></span>
+            <span>收藏 0 ></span>
+            <span>安装记录 198 ></span>
+        </div>
+    </div>
+
+    <div class="nav">
+        <div class="wleft">
+            <h4>应用升级 ></h4>
+            <img src="./img/xiangrikui.jpg" alt="404">
+            <h5>应用均为最新版本</h5>
+        </div>
+        <div class="wright">
+            <div class="wrightUp">
+                <h4>手机清理</h4>
+                <h5>215G/512G</h4>
+                    <div class="ht">
+                        <div class="lt"></div>
+                    </div>
+                    <h6>垃圾清理 ></h6>
+            </div>
+
+            <div class="wrightDown">
+                <h5>应用卸载 ></h5>
+                <div class="ht"></div>
+                <h5>系统应用管理 ></h5>
+            </div>
+        </div>
+    </div>
+    <nav id="bnav">
+        <ul>
+            <li>
+                <nav id="bnav">
+                    <ul>
+                        <li>
+                            <a href="index.html">
+                                <span>
+                                    <svg class="icon" aria-hidden="true">
+                                        <use xlink:href="#icon-shouye"></use>
+                                    </svg>
+                                </span>
+                                <p>首页</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="youxi.html">
+                                <span>
+                                    <svg class="icon" aria-hidden="true">
+                                        <use xlink:href="#icon-child"></use>
+                                    </svg>
+                                </span>
+                                <p>游戏</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./bangdan.html">
+                                <span>
+                                    <svg class="icon" aria-hidden="true">
+                                        <use xlink:href="#icon-icon_shoucang-copy"></use>
+                                    </svg>
+                                </span>
+                                <p>榜单</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./ruanjian.html">
+                                <span>
+                                    <svg class="icon" aria-hidden="true">
+                                        <use xlink:href="#icon-yingyongshichang-"></use>
+                                    </svg>
+                                </span>
+                                <p>软件</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./wode.html">
+                                <span>
+                                    <svg class="icon" aria-hidden="true">
+                                        <use xlink:href="#icon-wode-copy"></use>
+                                    </svg>
+                                </span>
+                                <p>我的</p>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+</body>
+
+</html>

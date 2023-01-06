@@ -1,0 +1,91 @@
+#smain .message img {
+    width: 16vw;
+    height: 16vw;
+    border-radius: 50%;
+}
+
+#smain .message h5 {
+    color: #666;
+}
+
+#smain .message .lt {
+    line-height: 16vw;
+    margin-left: 25vw;
+    font-size: 25px;
+    font-weight: 800;
+    color: #666;
+}
+
+#smain .sleft {
+    width: 42vw;
+    height: 38vw;
+    padding-left: 4vw;
+    padding-top: 5vw;
+    border-radius: 4vw;
+    background-color: #dcf0fe;
+}
+
+#smain .sleft .one {
+    display: flex;
+    margin-bottom: 13vw;
+}
+
+#smain .message .txt {
+    margin-top: 4vw;
+}
+
+#smain .message {
+    display: flex;
+    height: 16vw;
+    margin-bottom: 7vw;
+}
+
+#smain h3 {
+    font-size: 26px;
+    margin-top: 7vw;
+    font-weight: 550;
+    color: #343434;
+}
+
+.snav {
+    height: 12vw;
+    font-size: 36px;
+    margin-top: 1vw;
+}
+
+.about h6 {
+    margin-top: 9vw;
+    color: #8f95a6;
+}
+
+.about .submit {
+    display: flex;
+    margin-top: 8vw;
+}
+
+.about .submit span {
+    margin-left: 26vw;
+}
+
+
+.manage .submit {
+    display: flex;
+    margin-top: 8vw;
+}
+
+.manage .submit span {
+    margin-left: 51vw;
+}
+
+.exit {
+    width: 86vw;
+    height: 12vw;
+    line-height: 12vw;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 5vw;
+    margin-bottom: 2vw;
+    color: #303030;
+    border-radius: 5vw;
+    background-color: #f0f0f0;
+}

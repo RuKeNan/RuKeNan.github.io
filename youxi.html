@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no, viewport-fit=cover">
+    <title>游戏</title>
+    <script src="./font/iconfont.js"></script>
+    <link rel="stylesheet" href="./css/pubw.css">
+    <link rel="stylesheet" href="swiper/swiper-bundle.min.css">
+    <style>
+        .icon {
+            width: 1em;
+            height: 1em;
+            vertical-align: -0.15em;
+            fill: currentColor;
+            overflow: hidden;
+        }
+
+        #heade {
+            margin-top: 1vw;
+            background-color: #fff;
+            width: 100%;
+            display: flex;
+
+            position: fixed;
+            z-index: 100;
+        }
+
+        #heade>span:first-child {
+            font-size: 30px;
+            padding: 0 25px;
+
+            line-height: 30px;
+        }
+
+        #heade>div>span:nth-child(1) {
+
+            font-size: 25px;
+        }
+
+        #heade div {
+            flex-grow: 1;
+            background-color: #eee;
+            border-radius: 12px;
+            /* display: flex; */
+            /* margin-bottom: 50vw; */
+        }
+
+        #heade div span {
+            margin: 0 20px;
+            line-height: 30px;
+        }
+
+        #heade input {
+            border: none;
+            outline: none;
+            background-color: #eee;
+            line-height: 30px;
+            flex-grow: 1;
+            border-radius: 12px;
+        }
+
+        #heade span:last-child {
+            font-size: 30px;
+            margin-left: 3vw;
+            margin-right: 10vw;
+        }
+
+        #bnav {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: #eee;
+            z-index: 9;
+        }
+
+        #bnav ul {
+            display: flex;
+        }
+
+        #bnav li {
+            width: 20%;
+            text-align: center;
+        }
+
+        #bnav svg {
+            font-size: 30px;
+            margin: 5px auto;
+
+        }
+
+        #bnav p {
+
+            font-size: 14px;
+            line-height: 22px;
+
+        }
+
+        p {
+            margin-top: 1vw;
+            font-weight: 700;
+        }
+
+        .swiper {
+            width: 100%;
+            height: 100%;
+        }
+
+        .swiper-wrapper .swiper-slide {
+            width: 89vw;
+            height: 63vw;
+            /* background-color: pink; */
+        }
+
+        .swiper-wrapper .swiper-slide img {
+            /* width: 100%; */
+            height: 51vw;
+            border-radius: 5vw;
+        }
+
+        .swiper-wrapperTwo .swiper-slide {
+            width: 22vw;
+            height: 38vw;
+        }
+
+        /* .mySwiperTwo .swiper-wrapperTwo {
+            width: 22vw;
+            height: 38vw;
+        } */
+
+        .mySwiperTwo .swiper-wrapperTwo img {
+            width: 22vw;
+            height: 22vw;
+            border-radius: 4vw;
+        }
+
+        .mySwiperTwo .swiper-wrapperTwo h5 {
+            text-align: center;
+        }
+
+        .mySwiperTwo .swiper-wrapperTwo .anzhuang {
+            width: 14vw;
+            height: 6vw;
+            font-size: 4vw;
+            /* margin-top: 4vw; */
+            margin-left: 4vw;
+            text-align: center;
+            color: #06b273;
+            border: 1px solid #06b273;
+            border-radius: 15px;
+            /* text-align: center; */
+        }
+
+        .mySwiperOne {
+            padding-top: 13vw;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header id="heade">
+
+        <div>
+            <span>
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-sousuo"></use>
+                </svg>
+            </span>
+            <input type="text" placeholder="哈利波特:魔法觉醒-全新光影">
+        </div>
+        <span>
+            <svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-xiazai"></use>
+            </svg>
+        </span>
+
+    </header>
+    <!-- Swiper -->
+    <div class="swiper mySwiperOne">
+        <div class="swiper-wrapper swiper-wrapperOne">
+            <div class="swiper-slide">
+                <h5>王者荣耀</h5>
+                <p>迷你斗罗 时空交汇</p>
+                <img src="./img/wangzherongyaoxuanchuan.png" alt="404">
+            </div>
+            <div class="swiper-slide">
+                <h5>迷你世界</h5>
+                <p>迷你斗罗 时空交汇</p>
+                <img src="./img/yuanshenxuanchuan.png" alt="404">
+            </div>
+            <div class="swiper-slide">
+                <h5>蛋仔派对</h5>
+                <p>派对游戏</p>
+                <img src="./img/danzaipaiduixuanchuan.jpg" alt="404">
+            </div>
+        </div>
+        <!-- <div class="swiper-pagination"></div> -->
+    </div>
+    <p>本周热点</p>
+
+    <!-- Swiper -->
+    <div class="swiper mySwiperTwo">
+        <div class="swiper-wrapper swiper-wrapperTwo">
+            <div class="swiper-slide">
+                <img src="./img/wodeshijie.gif" alt="404">
+                <h5>我的世界</h5>
+                <div class="anzhuang">安装</div>
+            </div>
+            <div class="swiper-slide">
+                <img src="./img/wangzherongyao.png" alt="404">
+                <h5>王者荣耀</h5>
+                <div class="anzhuang">安装</div>
+            </div>
+            <div class="swiper-slide">
+                <img src="./img/hepingjingying.png" alt="404">
+                <h5>和平精英</h5>
+                <div class="anzhuang">安装</div>
+            </div>
+            <div class="swiper-slide">
+                <img src="./img/jinchanchanzhizhan.jpg" alt="404">
+                <h5>金铲铲</h5>
+                <div class="anzhuang">安装</div>
+            </div>
+            <div class="swiper-slide">
+                <img src="./img/danzaipaidui.png" alt="404">
+                <h5>蛋仔派对</h5>
+                <div class="anzhuang">安装</div>
+            </div>
+        </div>
+        <!-- <div class="swiper-pagination"></div> -->
+        <nav id="bnav">
+            <ul>
+                <li>
+                    <nav id="bnav">
+                        <ul>
+                            <li>
+                                <a href="./index.html">
+                                    <span>
+                                        <svg class="icon" aria-hidden="true">
+                                            <use xlink:href="#icon-shouye"></use>
+                                        </svg>
+                                    </span>
+                                    <p>首页</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="./youxi.html">
+                                    <span>
+                                        <svg class="icon" aria-hidden="true">
+                                            <use xlink:href="#icon-child"></use>
+                                        </svg>
+                                    </span>
+                                    <p>游戏</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="./bangdan.html">
+                                    <span>
+                                        <svg class="icon" aria-hidden="true">
+                                            <use xlink:href="#icon-icon_shoucang-copy"></use>
+                                        </svg>
+                                    </span>
+                                    <p>榜单</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="./ruanjian.html">
+                                    <span>
+                                        <svg class="icon" aria-hidden="true">
+                                            <use xlink:href="#icon-yingyongshichang-"></use>
+                                        </svg>
+                                    </span>
+                                    <p>软件</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="./wode.html">
+                                    <span>
+                                        <svg class="icon" aria-hidden="true">
+                                            <use xlink:href="#icon-wode-copy"></use>
+                                        </svg>
+                                    </span>
+                                    <p>我的</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+        </nav>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="./swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiperOne", {
+            slidesPerView: 1.1,
+            spaceBetween: 10,
+            freeMode: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        });
+
+
+    </script>
+
+    <script>
+        var swiper = new Swiper(".mySwiperTwo", {
+            slidesPerView: 4,
+            spaceBetween: 10,
+            freeMode: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        });
+    </script>
+</body>
+
+</html>

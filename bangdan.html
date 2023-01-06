@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no, viewport-fit=cover">
+    <title>榜单</title>
+    <script src="./font/iconfont.js"></script>
+    <link rel="stylesheet" href="./css/pubw.css">
+    <link rel="stylesheet" href="./swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./css/zy2.css">
+    <link rel="stylesheet" href="./css/zy.css">
+
+    <style>
+        .icon {
+            width: 1em;
+            height: 1em;
+            vertical-align: -0.15em;
+            fill: currentColor;
+            overflow: hidden;
+        }
+
+        .zy .num {
+            margin-top: 4vw;
+            margin-right: 4vw;
+            font-size: 24px;
+            font-weight: 800;
+            color: #fc5132;
+        }
+
+        .biaoQianFather {
+            display: flex;
+            padding-top: 13vw;
+        }
+
+        .biaoQianFather .biaoQianSonOne {
+            width: 16vw;
+            height: 8vw;
+            line-height: 8vw;
+            font-size: 13px;
+            text-align: center;
+            border-radius: 5vw;
+            color: #ee5527;
+            background-color: #fef4f0;
+        }
+
+        .biaoQianFather .biaoQianSon {
+            width: 16vw;
+            height: 8vw;
+            line-height: 8vw;
+            font-size: 13px;
+            margin-left: 2vw;
+            text-align: center;
+            border-radius: 5vw;
+            background-color: #f7f7f7;
+        }
+
+        #heade {
+            margin-top: 1vw;
+
+            background-color: #fff;
+            width: 100%;
+            display: flex;
+
+            position: fixed;
+            z-index: 100;
+        }
+
+        #heade>span:first-child {
+            font-size: 30px;
+            padding: 0 25px;
+
+            line-height: 30px;
+        }
+
+        #heade>div>span:nth-child(1) {
+
+            font-size: 25px;
+        }
+
+        #heade div {
+            flex-grow: 1;
+            background-color: #eee;
+            border-radius: 12px;
+            display: flex;
+        }
+
+        #heade div span {
+            margin: 0 20px;
+            line-height: 30px;
+        }
+
+        #heade input {
+            border: none;
+            outline: none;
+            background-color: #eee;
+            line-height: 30px;
+            flex-grow: 1;
+            border-radius: 12px;
+        }
+
+        #heade span:last-child {
+            font-size: 30px;
+            margin-right: 8vw;
+        }
+
+
+        /* ul {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: #000;
+        } */
+
+        #bnav {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: #eee;
+            z-index: 9;
+        }
+
+        body {
+            margin-bottom: 100px;
+        }
+
+        #bnav ul {
+            display: flex;
+        }
+
+        #bnav li {
+            width: 20%;
+            text-align: center;
+        }
+
+        #bnav svg {
+            font-size: 30px;
+            margin: 5px auto;
+
+        }
+
+        #bnav p {
+
+            font-size: 14px;
+            line-height: 22px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <header id="heade">
+
+        <div>
+            <span>
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-sousuo"></use>
+                </svg>
+            </span>
+            <input type="text" placeholder="哈利波特:魔法觉醒-全新光影">
+
+        </div>
+        <span>
+            <svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-xiazai"></use>
+            </svg>
+        </span>
+
+    </header>
+    <div class="biaoQianFather">
+        <div class="biaoQianSonOne">下载榜</div>
+        <div class="biaoQianSon">飙升榜</div>
+        <div class="biaoQianSon">预约榜</div>
+        <div class="biaoQianSon">角色扮演</div>
+        <div class="biaoQianSon">休闲益智</div>
+    </div>
+	
+    <div id = "json_1">
+
+    </div>
+	
+    <div id="fixed"></div>
+    <div id="main"></div>
+    <div id="ad"></div>
+    <nav id="bnav">
+        <ul>
+            <li>
+                <nav id="bnav">
+                    <ul>
+                        <li>
+                            <a href="./index.html">
+                                <span>
+                                    <svg class="icon" aria-hidden="true">
+                                        <use xlink:href="#icon-shouye"></use>
+                                    </svg>
+                                </span>
+                                <p>首页</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./youxi.html">
+                                <span>
+                                    <svg class="icon" aria-hidden="true">
+                                        <use xlink:href="#icon-child"></use>
+                                    </svg>
+                                </span>
+                                <p>游戏</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./bangdan.html">
+                                <span>
+                                    <svg class="icon" aria-hidden="true">
+                                        <use xlink:href="#icon-icon_shoucang-copy"></use>
+                                    </svg>
+                                </span>
+                                <p>榜单</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./ruanjian.html">
+                                <span>
+                                    <svg class="icon" aria-hidden="true">
+                                        <use xlink:href="#icon-yingyongshichang-"></use>
+                                    </svg>
+                                </span>
+                                <p>软件</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./wode.html">
+                                <span>
+                                    <svg class="icon" aria-hidden="true">
+                                        <use xlink:href="#icon-wode-copy"></use>
+                                    </svg>
+                                </span>
+                                <p>我的</p>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+				
+				<script>
+					var jarr = [{
+						num:"1",
+						img : "./img/hepingjingying.png",
+						title : "和平精英",
+						score:"4.0分 | 竞技·吃鸡",
+						btn:"安装",
+					},{
+						num:"2",
+						img : "./img/danzaipaidui.png",
+						title : "蛋仔排队",	
+						score:"4.2分 | 派对游戏·休闲",
+						btn:"安装",
+					},{
+						num:"3",
+						img : "./img/ditiepaoku.png",
+						title : "地铁跑酷",	
+						score:"4.7分 | 跑酷·休闲",
+						btn:"安装",
+					},{
+						num:"4",
+						img : "./img/minishijie.png",
+						title : "迷你世界",	
+						score:"4.8分 | 创造",
+						btn:"安装",
+					},{
+						num:"5",
+						img : "./img/wangzherongyao.png",
+						title : "王者荣耀",	
+						score:"4.8分 | 策略",
+						btn:"安装",
+					},{
+						num:"6",
+						img : "./img/jinchanchanzhizhan.jpg",
+						title : "金铲铲之战",	
+						score:"4.0分 | 自走棋",
+						btn:"安装",
+					}]
+					
+					var jlist = document.getElementById("json_1");
+					jarr.forEach((v,i)=>{
+						var na = document.createElement("a");
+						na.innerHTML = `
+					    <div class="zy">
+					        <span class="num">${v.num}</span>
+					        <img src="${v.img}" alt="404">
+					        <div class="txt">
+					            <h3>${v.title}</h3>
+					            <span>${v.score}</span>
+					        </div>
+					        <div class="right">${v.btn}</div>
+					    </div>
+						`;
+						jlist.appendChild(na);
+					})
+				</script>
+</body>
+
+</html>
